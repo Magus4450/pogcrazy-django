@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    background-color: rgb(251, 251, 251);
+}
+a{
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.fade-in {
+    animation: fade-in ease-in-out 1s;
+}
+@keyframes fade-in {
+    0% {
+        transform: scale(1.05);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

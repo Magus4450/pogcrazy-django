@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap');
+
+// Globals
+@import"variables";
+@import"globals";
+
+// Header
+@import"navigation";
+
+// Home Page
+@import"banner";
+@import"collection-promo";
+@import"collection-showcase";
+@import"showcase-banner";
+@import"collection-carousel";
+
+
+// Account Page
+@import"account";
+// Footer
+@import"footer";

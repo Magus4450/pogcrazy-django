@@ -1,0 +1,219 @@
+footer{
+    color: gray;
+    margin-top: 2rem;
+    background-color: white;
+    width: 100%;
+
+    .insta-cover{
+        background-color: rgb(251, 251, 251);
+        margin-top: 6rem;
+        display: flex;
+        flex: 0 0 20%;
+        flex-direction: row;
+
+
+        &-img{
+            width: 20%;
+            height: 300px;    
+
+        }
+        &-overlay{           
+            color: white;
+            font-size: 1.5rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all ease .5s;
+            cursor: pointer;
+            i{
+                display: none;
+            }
+            &:hover{
+                background-color: rgba(0,0,0,0.5);
+                i{
+                    display: block;
+                }
+            }
+            
+        }
+
+    }
+
+    .overview{
+        width: 100%;
+        margin-top: 4rem;
+        font-size: .9rem;
+        letter-spacing: .025rem;
+
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 30%;
+        // justify-content: space-evenly;
+        &-menu{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 2.5rem;
+        }
+        &-help{
+            width: 100%;
+            padding: 1rem 2.5rem;
+        }
+        &-newsletter{
+            width: 100%;
+            padding: 1rem 2.5rem;
+            input{
+                margin: 1rem 0;
+                font-size: .85rem;
+                width: 100%;
+                padding: 1rem;
+                border: none;
+                background-color: transparent;
+                outline: 1px solid rgb(187, 187, 187);
+                &:focus{
+                outline: 1px solid black;
+    
+                }
+    
+            }
+            button{
+                margin: .5rem 0;
+                width: 50%;
+                padding: 1rem;
+                border: none;
+                background-color: rgb(251, 251, 251);
+                outline: 1px solid rgb(51, 51, 51);
+                letter-spacing: .1rem;
+                transition: all ease-in-out .3s;
+                &:hover{
+                    cursor: pointer;
+                    background-color: rgb(255, 255, 255);
+
+                    
+                }
+            }
+        }
+        &-head{
+            padding-bottom: 1rem;
+            color: black;
+            letter-spacing: .1rem;
+        }
+        &-list{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            // justify-content: space-between;
+            li{
+                width: 50%;
+                padding-top: 1rem;
+            }
+
+            &-item{
+                a{
+                    color: gray;
+                    transition: color ease .3s;
+
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+  
+    .socials{
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        i{
+            margin: 1rem;
+            transition: color ease .3s;
+            cursor: pointer;
+
+            &:hover{
+                color:black;
+            }
+        }
+    }
+    .footer{
+        padding: 3rem;
+        display: flex;
+        justify-content: space-between;
+        .copyright{
+            display: flex;
+            align-items: center;
+            color: black;
+            font-size: .9rem;
+
+        }
+        .payment{
+            font-size: 2rem;
+            i{
+                padding: 0 1rem;
+                transition: color ease .3s;
+
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    footer{
+        .overview{
+            &-list{
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            &-newsletter{
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    footer{
+        .insta-cover{
+            margin-top: 0;
+        }
+        .overview{
+            flex-wrap: wrap;
+
+            &-menu{
+                width: 50%;
+            }
+            &-help{
+                width: 50%;
+            }
+            &-newsletter{
+                button{
+                    width: 75%;
+                }
+            }
+
+            &-list{
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+        }
+        .footer{
+            flex-direction: column;
+            padding-top: 0;
+
+            .copyright{
+                padding: 2rem;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+

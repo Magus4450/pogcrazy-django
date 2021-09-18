@@ -1,0 +1,322 @@
+.hidden{
+    display: none;
+}
+.noscroll{
+    overflow: hidden;
+}
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    // height: 3rem;
+    padding: 0px 20px;
+    background-color: white;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9;
+    #hamburger-menu{
+        display: none;
+        cursor: pointer;
+        span{
+            display: block;
+            width: 20px;
+            height: 2.5px;
+            margin: 4px 0px;
+            background-color: black;
+        }
+    }
+    .nav-bar{        
+        list-style: none;
+        display: flex; 
+        font-size: .9rem;      
+        
+
+        .nav-item{
+            overflow: hidden;
+            padding: 20px 0px;
+            margin: 0px 20px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom ease-out .2s;
+            
+            a{       
+                cursor: pointer;         
+                color: black;
+                text-decoration: none;
+                
+            }
+            &:hover {
+                border-bottom: 2px solid black;               
+                
+                
+            }
+        }
+    }
+
+    .brand{
+        position: relative;
+        left: -9%;
+        font-family: 'Barlow', sans-serif;
+        font-size: 1.5rem;
+        font-weight: $medium;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    
+    }
+
+
+    .nav-opt{
+        display: flex;        
+        .opt-item{
+            i{
+                cursor: pointer;
+            }
+            padding: 20px 15px;
+            font-size: 1.05rem;           
+            
+        }        
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    nav{        
+        #hamburger-menu{
+            display: block;
+        }
+        .nav-bar{
+            display: none;
+        }
+        .brand{
+            left: 10%;
+        }
+    }
+}
+#mobile-overlay{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    transition: all ease-in-out 1s;
+}
+#mobile-menu{
+    z-index: 100;
+    position: fixed;
+    top:0;
+    width: 300px;
+    height: 100vh;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    #mobile-btn{        
+        padding: 0 2rem; 
+        margin: 1rem 0 2rem 0;
+        width: 20px;
+        height: 20px;    
+        cursor: pointer;        
+        
+        span{
+            display: block;
+            width: 20px;
+            height: 2px;
+            margin: 0px 0px;
+            background-color: white; 
+
+        }
+        :first-child{
+            transform: rotate(45deg);
+            position: relative;
+            top: 10px;
+
+        }
+        :last-child{
+            position: relative;
+            top: 8px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    #mobile-opt{
+        padding: 0 2rem; 
+        margin-bottom: 1rem;
+
+        .mobile-opt{
+            padding: 1.1rem 0;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid gray;
+
+            a{
+                text-decoration: none;
+                color: rgb(240, 240, 240);
+                font-size: .8rem;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+
+    #mobile-opt-extra{
+        padding: 0 2rem; 
+        .mobile-opt-extra{
+            padding: .7rem 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: .9rem;
+            color: rgb(182, 182, 182);
+
+        }
+    }
+    #mobile-menu-footer{
+    background-color: rgb(29, 29, 29);
+        position: sticky;
+        padding: 1rem 0;
+        margin-top: 5rem;
+        bottom: 0;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        border-top: 1px solid gray;
+    }
+}
+.mobileOverlayFadeIn{
+    animation: mobileOverlayFadeIn forwards .5s;
+    // display: none;
+}
+.mobileOverlayFadeOut{
+    animation: mobileOverlayFadeOut forwards .5s;
+    // display: block;
+    
+    
+}
+@keyframes mobileOverlayFadeIn {
+    from{
+        background-color: rgba(0,0,0,0);  
+    }
+    to {
+        background-color: rgba(0,0,0,0.5);
+    }
+
+}
+@keyframes mobileOverlayFadeOut {
+    0%{
+        background-color: rgba(0,0,0,0.5); 
+        // display: block; 
+    }
+    99%{
+        background-color: rgba(0,0,0,0);
+        // display: none;
+    }
+    100% {
+        background-color: rgba(0,0,0,0);
+        // display: none;
+
+    }
+
+}
+
+.cart{
+    z-index: 100;
+    position: fixed;
+    top:0;
+    right: -150%;
+    width: 30%;
+    min-width: 300px;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    // color: white;
+    overflow-x: hidden;
+    transition: all ease .3s;
+
+
+    &-head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.3rem;
+        border-bottom: 1px solid rgb(189, 189, 189);
+        span{
+            font-size: .95rem;
+            letter-spacing: .2rem;
+        }
+        &-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 1rem;
+            transition: all ease .3s;
+            &:hover{
+                cursor: pointer;
+                transform: rotate(180deg);
+                
+            }
+            span{
+                display: block;
+                width: 18px;
+                height: 2px;
+                background-color: gray;
+                &:first-child{
+                    transform: rotate(45deg) translate(1px);
+                    
+                }
+                &:last-child{
+                transform: rotate(-45deg)translate(1px);
+                }
+
+
+
+            }
+        }
+    }
+    &-body{
+        padding: 1.5rem;
+    }
+}
+
+
+.mobileMenuSlideIn{
+    animation: mobileMenuSlideIn forwards .5s;
+}
+.mobileMenuSlideOut{
+    animation: mobileMenuSlideOut forwards .5s;
+}
+@keyframes mobileMenuSlideIn {
+    from{
+        left :-100%
+
+    }
+    to{
+        left :0;
+    }
+}
+@keyframes mobileMenuSlideOut {
+    from{
+        left :0%
+    }
+    to{
+        left :-100%;
+    }
+}
+@media screen and (max-width: 550px){
+    nav{        
+
+        .brand{
+            left: 10%;
+        }
+        .nav-opt{
+            #wishlist{
+                display: none;
+            }
+            #account{
+                display: none;
+            }
+        }
+    }
+}
