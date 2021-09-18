@@ -1,0 +1,336 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POGCRAZY</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    
+
+    <!---------------------------------Navigation---------------------------------------->
+    <nav>
+        <div id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <li class="nav-bar" >
+            <ul class ="nav-item"><a href="#">SHOP</a></ul>
+            <ul class ="nav-item"><a href="#">COLLECTIONS</a></ul>
+            <ul class ="nav-item"><a href="#">ABOUT</a></ul>
+            <ul class ="nav-item"><a href="#">JOURNAL</a></ul>            
+        </li>
+        <div class="brand">
+            <span><a href="./index.html">POGCRAZY</a></span>
+        </div>
+        <div class="nav-opt">                
+
+            <div  class ="opt-item" id="wishlist">
+                <i class="fal fa-heart" ></i>
+            </div>
+            <div  class ="opt-item" id="account">
+                <i class="fal fa-user" onclick="location.href = './account.html'"></i>
+            </div>
+            <div  class ="opt-item" id="search">
+                <i class="fal fa-search"></i>
+            </div>
+            <div  class ="opt-item" id="cart">
+                <i class="fal fa-shopping-cart"></i>
+            </div>
+        </div>         
+    </nav>
+
+    <!----------------------------------------------Mobile Menu----------------------------------------------->
+    <div id="mobile-overlay" class="hidden"></div>
+    <div id="mobile-menu" class="hidden">
+        <div id="mobile-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mobile-opt">
+            <div class="mobile-opt"><a href="#">SHOP</a>  +</div>
+            <div class="mobile-opt"><a href="#">COLLECTIONS</a>  +</div>
+            <div class="mobile-opt"><a href="#">ABOUT</a></div>
+            <div class="mobile-opt"><a href="#">JOURNAL</a></div>
+        </div>
+        <div id="mobile-opt-extra">
+            <div class="mobile-opt-extra">Retailers</div>
+            <div class="mobile-opt-extra">Contact</div>
+            <div class="mobile-opt-extra">Account</div>
+        </div>
+        <div id="mobile-menu-footer">
+            <div class="mobile-menu-socials"><i class="fab fa-facebook-f"></i></div>
+            <div class="mobile-menu-socials"><i class="fab fa-instagram"></i></div>
+            <div class="mobile-menu-socials"><i class="fab fa-pinterest-p"></i></div>
+            <div class="mobile-menu-socials"><i class="fab fa-youtube"></i></div>
+        </div>
+    </div>
+
+    <!--------------------------------------------------------Cart------------------------------------------------>
+
+    <div class="cart">
+        <div class="cart-head">
+            <span>CART</span>
+            <div class="cart-head-button">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="cart-body">
+
+        </div>
+    </div>
+    <!-----------------------------------------Banner--------------------------------->
+
+    <div class="banner">
+        <div class="overlay">
+            <div class="banner-info">
+                <h2>SIGNATURE LINE</h2>
+                <p>Discover new styles added to our signature line</p>
+                <a href="#">Discover the collection</a>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------Collection Promo 1----------------------------->
+
+    <div class="collection-promo">
+        <div class="promo-1">
+            <h2>ECO-CONSCIOUS SIGNATURE LINE</h2>
+            <img src="{% static 'images/promo1.jpg' %}" alt="ECO-CONSCIOUS SIGNATURE LINE 1">
+            <p>The third launch of signature line continues a pledge to sustainability at the forefront by focusing on consciousness for a smarter approach to fashion</p>
+            <a href="#">Discover the collection</a>
+        </div>
+        <div class="promo-2">
+            <img src="{% static 'images/promo2.jpg' %}" alt="ECO-CONSCIOUS SIGNATURE LINE 2">
+        </div>
+    </div>
+
+    <!-----------------------------------------Collection Showcase----------------------------->
+    <div class="collection-showcase fade-in">
+        <div class="collection-showcase-card" id="card1" onclick="location.href='#';">
+            <img src="{% static 'images/card11.jpg' %}" alt="">
+            <h2>COTTON PUFFED SLEEVES SHIRT DRESS</h2>
+            <span class="price">$655</span>
+        </div>
+        <div class="collection-showcase-card" id="card2" onclick="location.href='#';">
+            <img src="{% static 'images/card21.jpg' %}" alt="" >
+            <h2>SIDE PLEATS LONG JACKET</h2>
+            <span class="price">$853</span>
+        </div>
+        <div class="collection-showcase-card" id="card3" onclick="location.href='#';">
+            <img src="{% static 'images/card31.jpg' %}" alt="" >
+            <h2>COTTON KAFTAN DRESS</h2>
+            <span class="price">$589</span>
+        </div>
+        <div class="collection-showcase-card" id="card4" onclick="location.href='#';">
+            <img src="{% static 'images/card41.jpg' %}" alt="" >
+            <h2>CONTRASTED LOOSE LONG CARDIGAN</h2>
+            <span class="price">$671</span>
+        </div>
+
+    </div>
+
+    <!-----------------------------------------Shop Collection Button----------------------------->
+    <div class="shop-collection">
+        <a href="#">SHOP THE COLLECTION</a>
+    </div>
+
+
+    <!--------------------------------------------Banner------------------------------------->
+    <div class="showcase-banner">
+        <div class="overlay">
+            <h2>SPRING SUMMER 2021</h2>
+            <a href="#">Discover the collection</a>                
+        </div>
+
+    </div>
+
+    <!-----------------------------------------Collection Promo 1----------------------------->
+
+    <div class="collection-promo">
+        <div class="promo-3">
+            <h2>ECO-CONSCIOUS SIGNATURE LINE</h2>
+            <img src="{% static 'images/promo3.jpg' %}" alt="ECO-CONSCIOUS SIGNATURE LINE 1">
+            <p>The Bouguessa FW21 collection is about reinventing wardrobe classics for the modern-day wearer.</p>
+            <a href="#">Discover the collection</a>
+        </div>
+        <div class="promo-4">
+            <!-- <img src="./images/promo4.jpg" alt="ECO-CONSCIOUS SIGNATURE LINE 2"> -->
+        </div>
+    </div>
+    
+
+    <!-------------------------------------------Collection Carousel------------------------>
+    <div class="collection-carousel">
+
+    
+        <div class ="collection-carousel-title">
+            SPRING-SUMMER 2021
+        </div>
+        <div class=collection-carousel-main>
+            <div class="next-button left-button">
+                <i class="far fa-chevron-left"></i>
+            </div>
+            <div class="collection-carousel-cards">
+                <div class="bag">
+                    <div class="collection-carousel-card" id="1" data-pos="1" onclick="location.href='#';">
+                        <img src="{% static 'images/card11.jpg' %}" alt="">
+                        <h2>COTTON PUFFED SLEEVES SHIRT DRESS</h2>
+                        <span class="price">$655</span>
+                    </div>
+                    <div class="collection-carousel-card" id="2" onclick="location.href='#';">
+                        <img src="{% static 'images/card21.jpg' %}" alt="" >
+                        <h2>SIDE PLEATS LONG JACKET</h2>
+                        <span class="price">$853</span>
+                    </div>
+                    <div class="collection-carousel-card" id="3" onclick="location.href='#';">
+                        <img src="{% static 'images/card31.jpg' %}" alt="" >
+                        <h2>COTTON KAFTAN DRESS</h2>
+                        <span class="price">$589</span>
+                    </div>
+                    <div class="collection-carousel-card" id="4" onclick="location.href='#';">
+                        <img src="{% static 'images/card41.jpg' %}" alt="" >
+                        <h2>CONTRASTED LOOSE LONG CARDIGAN</h2>
+                        <span class="price">$671</span>
+                    </div>
+
+                    <div class="collection-carousel-card" id="5" onclick="location.href='#';">
+                        <img src="{% static 'images/card11.jpg' %}" alt="">
+                        <h2>COTTON PUFFED SLEEVES SHIRT DRESS</h2>
+                        <span class="price">$655</span>
+                    </div>
+ 
+
+
+                </div>
+                
+            </div>
+            <div class="next-button right-button">
+                <i class="far fa-chevron-right"></i>
+            </div>
+        </div>  
+    </div>    
+
+    <div class="shop-collection">
+        <a href="#">SHOP THE COLLECTION</a>
+    </div>
+
+    <!-----------------------------------------Footer----------------------------------->
+
+    <footer>
+        <div class="insta-cover">
+            <div class="insta-cover-img" >
+                <div class="insta-cover-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="insta-cover-img">
+                <div class="insta-cover-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="insta-cover-img">
+                <div class="insta-cover-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="insta-cover-img">
+                <div class="insta-cover-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="insta-cover-img">
+                <div class="insta-cover-overlay">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            
+            
+
+        </div>
+        <div class="overview">
+
+            <div class="overview-menu">
+                <p class = "overview-head">
+                    SHOP MENU
+                </p>
+                <ul class= "overview-list">
+                    <li class="overview-list-item"><a href="#">Coats & Long Jackets</a> </li>
+                    <li class="overview-list-item"><a href="#">Skirts</a> </li>
+                    <li class="overview-list-item"><a href="#">Pants</a> </li>
+                    <li class="overview-list-item"><a href="#">Dresses</a> </li>
+                    <li class="overview-list-item"><a href="#">Tops</a> </li>
+                    <li class="overview-list-item"><a href="#">Accessories</a> </li>
+                </ul>
+            </div>
+
+            <div class="overview-help">
+                <p class = "overview-head">
+                    HELP
+                </p>
+                <ul class= "overview-list">
+                    <li class="overview-list-item"><a href="">Contact</a> </li>
+                    <li class="overview-list-item"><a href="">My Account</a></li>
+                    <li class="overview-list-item"><a href="">Terms & Condition</a></li>
+                    <li class="overview-list-item"><a href="">Retailers</a></li>
+                    <li class="overview-list-item"><a href="">Privacy Policy</a></li>             
+                </ul>
+            </div>
+            <div class="overview-newsletter">
+                <p class = "overview-head">
+                    NEWSLETTER
+                </p>
+                <p class="overview-list-item">
+                    Sign up for 10% off your next order*
+                </p>
+                <form method="POST">
+                    <input type="email" name="email" placeholder="Enter your email address" autocomplete="off">
+                    <button type="submit">SUBSCRIBE</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="socials">
+            <div class="footer-socials"><i class="fab fa-facebook-f"></i></div>
+            <div class="footer-socials"><i class="fab fa-instagram"></i></div>
+            <div class="footer-socials"><i class="fab fa-pinterest-p"></i></div>
+            <div class="footer-socials"><i class="fab fa-youtube"></i></div>
+        </div>
+        <div class="footer">
+            <div class="copyright">
+                <p>&#169; 2021 POGCRAZY</p>
+            </div>
+            <div class="payment">
+                <i class="fab fa-apple-pay"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+            </div>
+        </div>
+
+
+    </footer>
+    <script>
+        const instaCovers = document.getElementsByClassName('insta-cover-img');
+        for (let i = 1; i < instaCovers.length+1; i++){
+            instaCovers[i-1].style.background = `url(static/images/insta-${i}.jpg) center center no-repeat`;
+            instaCovers[i-1].style.backgroundSize = 'contain';
+        }
+
+    </script>
+    <script src="{% static 'scripts/script.js' %}"></script>
+    <script src="{% static 'scripts/cart.js' %}"></script>
+    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+
+</body>
+</html>
