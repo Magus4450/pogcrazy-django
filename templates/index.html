@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+    Pogcrazy
+{% endblock title %}
+
+
+{% block content %}
+    <!-----------------------------------------Banner--------------------------------->
+
+    <div class="banner">
+        <div class="overlay">
+            <div class="banner-info">
+                <h2>SIGNATURE LINE</h2>
+                <p>Discover new styles added to our signature line</p>
+                <a href="#">Discover the collection</a>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------------------------Collection Promo 1----------------------------->
+
+    <div class="collection-promo">
+        <div class="promo-1">
+            <h2>ECO-CONSCIOUS SIGNATURE LINE</h2>
+            <img src="{% static 'images/promo1.jpg' %}" alt="ECO-CONSCIOUS SIGNATURE LINE 1">
+            <p>The third launch of signature line continues a pledge to sustainability at the forefront by focusing on consciousness for a smarter approach to fashion</p>
+            <a href="#">Discover the collection</a>
+        </div>
+        <div class="promo-2">
+            <img src="{% static 'images/promo2.jpg' %}" alt="ECO-CONSCIOUS SIGNATURE LINE 2">
+        </div>
+    </div>
+
+    <!-----------------------------------------Collection Showcase----------------------------->
+    <div class="collection-showcase fade-in">
+        <div class="collection-showcase-card" id="card1" onclick="location.href='#';">
+            <img src="{% static 'images/card11.jpg' %}" alt="">
+            <h2>COTTON PUFFED SLEEVES SHIRT DRESS</h2>
+            <span class="price">$655</span>
+        </div>
+        <div class="collection-showcase-card" id="card2" onclick="location.href='#';">
+            <img src="{% static 'images/card21.jpg' %}" alt="" >
+            <h2>SIDE PLEATS LONG JACKET</h2>
+            <span class="price">$853</span>
+        </div>
+        <div class="collection-showcase-card" id="card3" onclick="location.href='#';">
+            <img src="{% static 'images/card31.jpg' %}" alt="" >
+            <h2>COTTON KAFTAN DRESS</h2>
+            <span class="price">$589</span>
+        </div>
+        <div class="collection-showcase-card" id="card4" onclick="location.href='#';">
+            <img src="{% static 'images/card41.jpg' %}" alt="" >
+            <h2>CONTRASTED LOOSE LONG CARDIGAN</h2>
+            <span class="price">$671</span>
+        </div>
+
+    </div>
+
+    <!-----------------------------------------Shop Collection Button----------------------------->
+    <div class="shop-collection">
+        <a href="#">SHOP THE COLLECTION</a>
+    </div>
+
+
+    <!--------------------------------------------Banner------------------------------------->
+    <div class="showcase-banner">
+        <div class="overlay">
+            <h2>SPRING SUMMER 2021</h2>
+            <a href="#">Discover the collection</a>                
+        </div>
+
+    </div>
+
+    <!-----------------------------------------Collection Promo 1----------------------------->
+
+    <div class="collection-promo">
+        <div class="promo-3">
+            <h2>ECO-CONSCIOUS SIGNATURE LINE</h2>
+            <img src="{% static 'images/promo3.jpg' %}" alt="ECO-CONSCIOUS SIGNATURE LINE 1">
+            <p>The Bouguessa FW21 collection is about reinventing wardrobe classics for the modern-day wearer.</p>
+            <a href="#">Discover the collection</a>
+        </div>
+        <div class="promo-4">
+            <!-- <img src="./images/promo4.jpg" alt="ECO-CONSCIOUS SIGNATURE LINE 2"> -->
+        </div>
+    </div>
+    
+
+    <!-------------------------------------------Collection Carousel------------------------>
+    <div class="collection-carousel">
+
+    
+        <div class ="collection-carousel-title">
+            SPRING-SUMMER 2021
+        </div>
+        <div class=collection-carousel-main>
+            <div class="next-button left-button">
+                <i class="far fa-chevron-left"></i>
+            </div>
+            <div class="collection-carousel-cards">
+                <div class="bag">
+                    <div class="collection-carousel-card" id="1" data-pos="1" onclick="location.href='#';">
+                        <img src="{% static 'images/card11.jpg' %}" alt="">
+                        <h2>COTTON PUFFED SLEEVES SHIRT DRESS</h2>
+                        <span class="price">$655</span>
+                    </div>
+                    <div class="collection-carousel-card" id="2" onclick="location.href='#';">
+                        <img src="{% static 'images/card21.jpg' %}" alt="" >
+                        <h2>SIDE PLEATS LONG JACKET</h2>
+                        <span class="price">$853</span>
+                    </div>
+                    <div class="collection-carousel-card" id="3" onclick="location.href='#';">
+                        <img src="{% static 'images/card31.jpg' %}" alt="" >
+                        <h2>COTTON KAFTAN DRESS</h2>
+                        <span class="price">$589</span>
+                    </div>
+                    <div class="collection-carousel-card" id="4" onclick="location.href='#';">
+                        <img src="{% static 'images/card41.jpg' %}" alt="" >
+                        <h2>CONTRASTED LOOSE LONG CARDIGAN</h2>
+                        <span class="price">$671</span>
+                    </div>
+
+                    <div class="collection-carousel-card" id="5" onclick="location.href='#';">
+                        <img src="{% static 'images/card11.jpg' %}" alt="">
+                        <h2>COTTON PUFFED SLEEVES SHIRT DRESS</h2>
+                        <span class="price">$655</span>
+                    </div>
+ 
+
+
+                </div>
+                
+            </div>
+            <div class="next-button right-button">
+                <i class="far fa-chevron-right"></i>
+            </div>
+        </div>  
+    </div>    
+
+    <div class="shop-collection">
+        <a href="#">SHOP THE COLLECTION</a>
+    </div>
+{% endblock content %}
+
+
+{% block scripts %}
+    <script src="{% static 'scripts/script.js' %}"></script>
+    <script src="{% static 'scripts/cart.js' %}"></script>
+    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+{% endblock scripts %}

@@ -1,9 +1,12 @@
 from django.urls import path
-from .views import DetailTemplateView, LoginTemplateView, RegisterTemplateView
+from .views import detail, login, register, logout, addresses
 app_name = 'account'
 
 urlpatterns = [    
-    path('/detail/', DetailTemplateView.as_view(), name="detail"),
-    path('/login/', LoginTemplateView.as_view(), name="login"),
-    path('/register/', RegisterTemplateView.as_view(), name="register"),
+    path('detail/', detail, name="detail"),
+    path('login/', login, name="login"),
+    path('logout/', logout, name="logout"),
+    path('register/', register, name="register"),
+    path('addresses/', addresses, name="addresses"),
+
 ]

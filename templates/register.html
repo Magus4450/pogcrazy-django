@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Register
+{% endblock title %}
+
+
+{% block content %}
+
+
+
+    <!---------------------------------------------Register------------------------------------------------->
+
+    <div class="login" id="register">
+        <div class="login-head">
+            <h2>REGISTER</h2>
+            <p>Please fill in the information below:</p>
+        </div>
+        <div class="login-form">
+            <form action="" method="POST">
+                <!-- <input type="text" name="first_name" placeholder="First name" autocomplete="off">
+                <input type="text" name="last_name" placeholder="Last name" autocomplete="off">
+                <input type="email" name="email" placeholder="Email" autocomplete="off">
+                <input type="password" name="password1" placeholder="Password">
+                <input type="password" name="password2" placeholder="Confirm Password"> -->
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">CREATE MY ACCOUNT</button>
+            </form>
+        </div>
+
+    </div>
+
+    
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'scripts/login.js' %}"></script>
+    <script src="{% static 'scripts/cart.js' %}"></script>
+    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+{% endblock scripts %}

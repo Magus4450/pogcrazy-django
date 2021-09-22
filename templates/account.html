@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Account
+{% endblock title %}
+
+
+{% block content %}
+    <!-----------------------------------------Account--------------------------------->
+
+
+    <div class="account">
+        <div class="account-welcome">
+            <a href="{% url 'account:logout' %}">LOGOUT</a>
+            <h3>MY ACCOUNT</h3>
+            <p>Welcome back, {{ user.username  }}!</p>
+        </div>
+        <div class="account-orders">
+            <div class="account-title">
+                MY ORDERS
+            </div>
+            <div class="account-orders-orders">
+                You haven't placed any orders yet
+            </div>
+        </div>
+        <div class="account-primary-address">
+            <div class="account-title">
+                PRIMARY ADDRESS
+            </div>
+            <div class="address">
+                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
+                <p>Address1</p>
+                <p>Address2</p>
+                <p>Zipcode City Code</p>
+                <p>Country</p>
+                <button class='address-btn'>EDIT ADDRESSES</button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'scripts/login.js' %}"></script>
+    <script src="{% static 'scripts/cart.js' %}"></script>
+    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+{% endblock scripts %}

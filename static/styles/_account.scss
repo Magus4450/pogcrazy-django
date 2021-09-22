@@ -265,3 +265,106 @@
     }
     
 }
+
+.add-ress{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+
+    .back{
+        margin-bottom: 1.75rem;
+        a{
+            text-decoration: none;
+            color: gray;
+            font-size: .7rem;
+            word-spacing: .2rem;
+            letter-spacing: .1rem;
+
+            transition: all ease .3s;                    
+            &:hover {
+                color: black;
+            }
+
+        }
+    }
+    h2{
+        margin-bottom: 1.75rem;
+
+        font-weight:$medium;
+        font-size: 1.2rem;
+        letter-spacing: .3rem;
+
+    }
+    button{
+        width: 250px;
+        margin: .5rem 0;
+        padding: 1rem;
+        border: none;
+        
+        background-color: rgb(255, 255, 255);
+        outline: 1px solid rgb(51, 51, 51);
+        letter-spacing: .1rem;
+        transition: all ease-in-out .3s;
+        &:hover{
+            cursor: pointer;
+            background-color: rgb(251, 251, 251);
+        }
+    }
+}
+.addresses{
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+    .address{
+        width: 33%;
+        padding-right: 1rem;
+        margin-bottom: 3rem;
+        &-head{
+            color: gray;
+            border-bottom: 1px solid rgb(230, 230, 230);
+            font-size: .75rem;
+            letter-spacing: .1rem;
+            padding-bottom: .5rem;
+            margin-bottom: 2rem;
+        }
+        &-body{
+            line-height: 1.2rem;
+            #address-name{
+                margin-bottom: 1rem;
+            }
+            .edit{
+                margin-top: 1.5rem;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    padding-bottom: .25rem;
+                    border-bottom: 1px solid black;
+                    transition: all ease .3s;
+                    &:hover{
+                        color: gray;
+                        border-bottom: 1px black gray;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+    .addresses{
+        .address{
+            width: 49%;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    .addresses{
+        .address{
+            width: 98%;
+        }
+    }
+}

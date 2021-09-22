@@ -1427,6 +1427,125 @@ nav .nav-opt .opt-item i {
   }
 }
 
+.add-ress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+}
+
+.add-ress .back {
+  margin-bottom: 1.75rem;
+}
+
+.add-ress .back a {
+  text-decoration: none;
+  color: gray;
+  font-size: .7rem;
+  word-spacing: .2rem;
+  letter-spacing: .1rem;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.add-ress .back a:hover {
+  color: black;
+}
+
+.add-ress h2 {
+  margin-bottom: 1.75rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: .3rem;
+}
+
+.add-ress button {
+  width: 250px;
+  margin: .5rem 0;
+  padding: 1rem;
+  border: none;
+  background-color: white;
+  outline: 1px solid #333333;
+  letter-spacing: .1rem;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+}
+
+.add-ress button:hover {
+  cursor: pointer;
+  background-color: #fbfbfb;
+}
+
+.addresses {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+}
+
+.addresses .address {
+  width: 33%;
+  padding-right: 1rem;
+  margin-bottom: 3rem;
+}
+
+.addresses .address-head {
+  color: gray;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: .75rem;
+  letter-spacing: .1rem;
+  padding-bottom: .5rem;
+  margin-bottom: 2rem;
+}
+
+.addresses .address-body {
+  line-height: 1.2rem;
+}
+
+.addresses .address-body #address-name {
+  margin-bottom: 1rem;
+}
+
+.addresses .address-body .edit {
+  margin-top: 1.5rem;
+}
+
+.addresses .address-body .edit a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid black;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.addresses .address-body .edit a:hover {
+  color: gray;
+  border-bottom: 1px black gray;
+}
+
+@media screen and (max-width: 1000px) {
+  .addresses .address {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .addresses .address {
+    width: 98%;
+  }
+}
+
 footer {
   color: gray;
   margin-top: 2rem;

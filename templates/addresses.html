@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    Account
+{% endblock title %}
+
+
+{% block content %}
+    <!-----------------------------------------Account--------------------------------->
+
+    <div class="add-ress">
+        <div class="back"><a href="">&lt;&nbsp;&nbsp;BACK TO ACCOUNT</a></div>
+        <h2>MY ADDRESSES</h2>
+        <button>ADD A NEW ADDRESS</button>
+    </div>
+    <div class="addresses">
+        <div class="address">
+            <div class="address-head">
+                DEFAULT ADDRESS
+            </div>
+            <div class="address-body">
+                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
+                <p>Address1</p>
+                <p>Address2</p>
+                <p>Zipcode City Code</p>
+                <p>Country</p>
+                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
+            </div>            
+        </div>
+        <div class="address">
+            <div class="address-head">
+                ADDRESS 2
+            </div>
+            <div class="address-body">
+                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
+                <p>Address1</p>
+                <p>Address2</p>
+                <p>Zipcode City Code</p>
+                <p>Country</p>
+                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
+            </div>            
+        </div>
+        <div class="address">
+            <div class="address-head">
+                ADDRESS 3
+            </div>
+            <div class="address-body">
+                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
+                <p>Address1</p>
+                <p>Address2</p>
+                <p>Zipcode City Code</p>
+                <p>Country</p>
+                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
+            </div>            
+        </div>
+        <div class="address">
+            <div class="address-head">
+                ADDRESS 4
+            </div>
+            <div class="address-body">
+                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
+                <p>Address1</p>
+                <p>Address2</p>
+                <p>Zipcode City Code</p>
+                <p>Country</p>
+                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
+            </div>            
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'scripts/login.js' %}"></script>
+    <script src="{% static 'scripts/cart.js' %}"></script>
+    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+{% endblock scripts %}

@@ -8,14 +8,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>{% block title %}  {% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body>
-
+    
 
     <!---------------------------------Navigation---------------------------------------->
     <nav>
@@ -31,7 +31,7 @@
             <ul class="nav-item"><a href="#">JOURNAL</a></ul>
         </li>
         <div class="brand">
-            <span><a href="./index.html">POGCRAZY</a></span>
+            <span><a href="{% url 'home:home' %}">POGCRAZY</a></span>
         </div>
         <div class="nav-opt">
 
@@ -92,45 +92,9 @@
         </div>
     </div>
 
+    {% block content %}
 
-
-    <!---------------------------------------------Login------------------------------------------------->
-
-
-    <div class="login" id="login">
-        <div class="login-head">
-            <h2>LOGIN</h2>
-            <p>Please enter your e-mail and password:</p>
-        </div>
-        <div class="login-form">
-            <form action="" method="POST">
-                <input type="text" name="email" placeholder="Email" autocomplete="off">
-                <input type="password" name="password" placeholder="Password">
-                <div id="forgot"><span>Forgot your password?</span></div>
-                <button type="submit">LOGIN</button>
-            </form>
-        </div>
-        <div class="login-signup">
-            <p>Don't have an account? <a href="{% url 'account:register' %}">Create One</a></p>
-        </div>
-    </div>
-
-    <div class="login" id="recover">
-        <div class="login-head">
-            <h2>RECOVER PASSWORD</h2>
-            <p>Please enter your email:</p>
-        </div>
-        <div class="login-form">
-            <form action="" method="POST">
-                <input type="email" name="email" placeholder="Email" autocomplete="off">
-                <button type="submit">RECOVER</button>
-            </form>
-        </div>
-        <div class="login-signup">
-            <p>Remember your password? <a href="#">Back to Login</a></p>
-        </div>
-    </div>
-
+    {% endblock content %}
 
     <!-----------------------------------------Footer----------------------------------->
 
@@ -240,9 +204,8 @@
         }
 
     </script>
-    <script src="{% static 'scripts/login.js' %}"></script>
-    <script src="{% static 'scripts/cart.js' %}"></script>
-    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+    {% block scripts %}
 
+    {% endblock scripts %}
 </body>
 </html>
