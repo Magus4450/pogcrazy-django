@@ -1,77 +1,66 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-    Account
+Account
 {% endblock title %}
 
 
 {% block content %}
-    <!-----------------------------------------Account--------------------------------->
+<!-----------------------------------------Addresses--------------------------------->
+<div class="form-container">
+    <div class="address-form login-form">
+        <div id="form-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <h2>ADD A NEW ADDRESS</h2>
+        <h3>Please fill the information below:</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">ADD A NEW ADDRESS</button>
+        </form>
+    </div>
+</div>
 
-    <div class="add-ress">
-        <div class="back"><a href="">&lt;&nbsp;&nbsp;BACK TO ACCOUNT</a></div>
-        <h2>MY ADDRESSES</h2>
-        <button>ADD A NEW ADDRESS</button>
-    </div>
-    <div class="addresses">
-        <div class="address">
-            <div class="address-head">
-                DEFAULT ADDRESS
-            </div>
-            <div class="address-body">
-                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
-                <p>Address1</p>
-                <p>Address2</p>
-                <p>Zipcode City Code</p>
-                <p>Country</p>
-                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
-            </div>            
+<!-- <div id="mobile-overlay" class="hidden"></div> -->
+<div class="add-ress">
+    <div class="back"><a href="{% url 'account:detail' %}">&lt;&nbsp;&nbsp;BACK TO ACCOUNT</a></div>
+    <h2>MY ADDRESSES</h2>
+    <button>ADD A NEW ADDRESS</button>
+</div>
+<div class="addresses">
+    {% for d in data %}
+    <div class="address">
+        <div class="address-head">
+            {% if d.default%}
+            DEFAULT ADDRESS
+            {% else %}
+            Address {{d.id}}
+            {% endif %}
         </div>
-        <div class="address">
-            <div class="address-head">
-                ADDRESS 2
+        <div class="address-body">
+            <p id="address-name">{{d.first_name}} {{d.last_name}}</p>
+            <p>{{ d.address1 }}</p>
+            {% if d.address2 %}
+            <p>{{ d.address2 }}</p>
+            {% endif %}
+            <p>{{d.zipcode}}</p>
+            <p>{{d.country}}</p>
+            <div class="edit">
+                <a href="" class="address-edit" id='edit{{ d.id }}'>Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="{% url 'account:addresses' d.id %}" id='delete'>Delete</a>
             </div>
-            <div class="address-body">
-                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
-                <p>Address1</p>
-                <p>Address2</p>
-                <p>Zipcode City Code</p>
-                <p>Country</p>
-                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
-            </div>            
-        </div>
-        <div class="address">
-            <div class="address-head">
-                ADDRESS 3
-            </div>
-            <div class="address-body">
-                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
-                <p>Address1</p>
-                <p>Address2</p>
-                <p>Zipcode City Code</p>
-                <p>Country</p>
-                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
-            </div>            
-        </div>
-        <div class="address">
-            <div class="address-head">
-                ADDRESS 4
-            </div>
-            <div class="address-body">
-                <p id="address-name">{{user.first_name}} {{user.last_name}}</p>
-                <p>Address1</p>
-                <p>Address2</p>
-                <p>Zipcode City Code</p>
-                <p>Country</p>
-                <div class="edit"><a href="">Edit</a>&nbsp;&nbsp;&nbsp;<a href="">Delete</a></div>
-            </div>            
         </div>
     </div>
+    {% endfor %}
+</div>
 
 {% endblock content %}
 
 {% block scripts %}
-    <script src="{% static 'scripts/login.js' %}"></script>
-    <script src="{% static 'scripts/cart.js' %}"></script>
-    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+<script src="{% static 'scripts/cart.js' %}"></script>
+<script src="{% static 'scripts/mobilemenu.js' %}"></script>
+<script src="{% static 'scripts/addresses.js' %}"></script>
 {% endblock scripts %}

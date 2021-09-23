@@ -1170,6 +1170,10 @@ nav .nav-opt .opt-item i {
   outline: 1px solid black;
 }
 
+.login-form label {
+  padding: 1rem;
+}
+
 .login-form button {
   width: 100%;
   padding: 1rem;
@@ -1534,6 +1538,93 @@ nav .nav-opt .opt-item i {
   border-bottom: 1px black gray;
 }
 
+.form-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.address-form {
+  z-index: 101;
+  position: fixed;
+  top: 5vh;
+  background-color: white;
+  width: 20%;
+  height: 90vh;
+  min-width: 500px;
+  padding: 3rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.address-form #form-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 2rem;
+  margin: 1rem 0 2rem 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.address-form #form-btn:hover span {
+  background-color: gray;
+}
+
+.address-form #form-btn span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 0px 0px;
+  background-color: black;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.address-form #form-btn :first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+  top: 10px;
+}
+
+.address-form #form-btn :last-child {
+  position: relative;
+  top: 8px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.address-form h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: .1rem;
+}
+
+.address-form h3 {
+  text-align: center;
+  font-size: .9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: .05rem;
+}
+
+#default-check {
+  width: auto;
+}
+
 @media screen and (max-width: 1000px) {
   .addresses .address {
     width: 49%;
@@ -1543,6 +1634,11 @@ nav .nav-opt .opt-item i {
 @media screen and (max-width: 600px) {
   .addresses .address {
     width: 98%;
+  }
+  .address-form {
+    top: 0;
+    width: 100%;
+    height: 100vh;
   }
 }
 

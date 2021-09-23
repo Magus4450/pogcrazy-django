@@ -1,2 +1,3 @@
 __pycache__
 pogcrazy/config.py
+db.sqlite3

@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
@@ -73,10 +74,45 @@ def detail(request):
     }
     return render(request, 'templates/account.html', context)
 
-    
+from .models import UserAddress
+from .forms import AddressForm
 @login_required(login_url=reverse_lazy('account:login'))
-def addresses(request):
+def addresses(request, pk=None):
+    if request.method == "GET":
+        if pk:
+            address = UserAddress.objects.get(id=pk)
+            address.delete()
+            return redirect(reverse_lazy('account:addresses'))
+        else:
+            form = AddressForm()
+            data = UserAddress.objects.all()
 
-    return render(request, 'templates/addresses.html')
+            context = {
+            'form': form,
+            'data': data
+            }
 
+            return render(request, 'templates/addresses.html', context)
+
+    elif request.method == "POST":
+        form = AddressForm(request.POST)
+        if form.is_valid():
+            address = UserAddress(
+                user=request.user,
+                first_name=form.cleaned_data['first_name'],
+                last_name=form.cleaned_data['last_name'],
+                phone=form.cleaned_data['phone'],
+                address1=form.cleaned_data['address1'],
+                address2=form.cleaned_data['address2'],
+                zipcode=form.cleaned_data['zipcode'],
+                country=form.cleaned_data['country'],
+                default=form.cleaned_data['default'],
+            )
+            # user.set_password(form.cleaned_data['password1'])
+            address.save()
+
+        return(redirect(reverse_lazy('account:addresses')))
+    
+
+    
 
