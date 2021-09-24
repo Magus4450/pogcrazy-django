@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     
     'home',
     'account',
+    'journal',
 ]
 
 MIDDLEWARE = [

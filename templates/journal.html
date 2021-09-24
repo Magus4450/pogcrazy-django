@@ -1,17 +1,71 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-    Account
+Account
 {% endblock title %}
 
 
 {% block content %}
-    <!-----------------------------------------Journal--------------------------------->
+<!-----------------------------------------Journal--------------------------------->
+<div class="journals-head">
+    JOURNAL
+</div>
+
+<div class="journals-body">
+    <div class="journals-journal">
+        <div class='journal-img' style="
+            background: url({% static 'images/journal1.jpg' %}) center;">
+        
+        </div>
+        <div class="journal-title">
+            THE CREATIVES : HAVE WON SOHN
+        </div>
+        <p class="journal-para">
+            Hae Won Sohn is a visual artist living and working between New York City and Baltimore. Through her
+            educational background in ceramics, Sohn’s mat...
+        </p>
+        <a href="" class="journal-read">Read more</a>
+    </div>
+    <div class="journals-journal">
+        <div class='journal-img' style="background: url({% static 'images/journal2.jpg' %}) center center no-repeat;">
+        </div>
+        <div class="journal-title">
+            WE ASK THE STYLIST: KAT LEBRASSE
+        </div>
+        <p class="journal-para">
+            Dubai-based stylist Kat LeBrasse wears Meera set in different ways, proving endless styling for these
+            classic wardrobe pieces.
+        </p>
+        <a href="" class="journal-read">Read more</a>
+    </div>
+    <div class="journals-journal">
+        <div class='journal-img' style="background: url({% static 'images/journal3.jpg' %}) center center no-repeat;">
+        </div>
+        <div class="journal-title">
+            THE CREATIVES: ANA D'CASTRO
+        </div>
+        <p class="journal-para">
+            Ana D’Castro is a Portuguese architect and visual artist.
+        </p>
+        <a href="" class="journal-read">Read more</a>
+    </div>
+    <div class="journals-journal">
+        <div class='journal-img' style="background: url({% static 'images/journal4.jpg' %}) center center no-repeat;">
+        </div>
+        <div class="journal-title">
+            WE ASK THE STYLIST: JADE CHILTON
+        </div>
+        <p class="journal-para">
+            Dubai-based Fashion Director and Stylist Jade Chilton shows us how she’s styling the SS21 Kiran Pocket Dress
+            for three different occasions.
+        </p>
+        <a href="" class="journal-read">Read more</a>
+    </div>
+</div>
 
 {% endblock content %}
 
 {% block scripts %}
-    <script src="{% static 'scripts/login.js' %}"></script>
-    <script src="{% static 'scripts/cart.js' %}"></script>
-    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+<script src="{% static 'scripts/cart.js' %}"></script>
+<script src="{% static 'scripts/mobilemenu.js' %}"></script>
 {% endblock scripts %}
