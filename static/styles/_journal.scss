@@ -1,0 +1,84 @@
+.journals{
+    &-head{
+        padding: 3rem 0;
+        font-size: 1.3rem;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
+    &-body{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+    }
+
+    &-journal{
+        width: 30%;
+        margin-bottom: 3rem;
+
+        .journal{
+            &-img{
+                height: 12rem;
+                width: 100%;
+                margin-bottom: 2rem;
+                &:hover{
+                    cursor: pointer;
+                    background-size: 120%;
+                }
+            }
+            &-title{
+                letter-spacing: .2rem;
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+                // text-align: center;
+                padding: 0 1em;
+                line-height: 1.5rem;
+
+            }
+            &-para{
+                // color: black;
+                padding: 0 1em;
+                font-size: .95rem;
+                word-spacing: .15rem;
+                letter-spacing: .05rem;
+                margin-bottom: 2rem;
+            }
+            &-read{
+                margin: 0 1em;
+                text-decoration: none;
+                color: black;
+                padding-bottom: .5rem;
+                border-bottom: 1px solid transparent;
+                transition: border-bottom .3s ease;
+                &:hover{
+                    border-bottom: 1px solid black;
+
+                }
+
+            }
+     
+        }
+
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .journals{
+        &-journal{
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    .journals{
+        &-body{
+            justify-content: center;
+        }
+        &-journal{
+            width: 80%;
+        }
+    }
+}
