@@ -1,3 +1,5 @@
+from .models import UserAddress
+from .forms import AddressForm
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
@@ -7,6 +9,7 @@ from .forms import RegisterForm, LoginForm
 from .models import UserInfo
 from django.contrib.auth import authenticate, login as dj_login, logout as dj_logout
 from django.contrib.auth.decorators import login_required
+
 
 def logout(request):
     dj_logout(request)
@@ -22,7 +25,7 @@ def login(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             print("VALIDATED")
-            
+
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
             print(f'Username: {username}, pass: {password}')
@@ -74,8 +77,7 @@ def detail(request):
     }
     return render(request, 'templates/account.html', context)
 
-from .models import UserAddress
-from .forms import AddressForm
+
 @login_required(login_url=reverse_lazy('account:login'))
 def addresses(request, pk=None):
     if request.method == "GET":
@@ -88,8 +90,8 @@ def addresses(request, pk=None):
             data = UserAddress.objects.all()
 
             context = {
-            'form': form,
-            'data': data
+                'form': form,
+                'data': data
             }
 
             return render(request, 'templates/addresses.html', context)
@@ -112,7 +114,3 @@ def addresses(request, pk=None):
             address.save()
 
         return(redirect(reverse_lazy('account:addresses')))
-    
-
-    
-

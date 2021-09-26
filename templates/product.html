@@ -1,16 +1,109 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-    Account
+Account
 {% endblock title %}
 
 
 {% block content %}
-    <!-----------------------------------------Journal--------------------------------->
+<!-----------------------------------------Product--------------------------------->
+<div class="product">
+
+    <div class="product-sidebar">
+
+    </div>
+
+    <div class="product-photos">
+        <div class="product-photos-img">
+            <img src="{% static 'images/pro1.jpg'%}" alt="">
+        </div>
+        <div class="product-photos-img">
+            <img src="{% static 'images/pro2.jpg' %}" alt="">
+        </div>
+        <div class="product-photos-img">
+            <img src="{% static 'images/pro3.jpg' %}" alt="">
+        </div>
+        <div class="product-photos-img">
+            <img src="{% static 'images/pro4.jpg' %}" alt="">
+        </div>
+        <div class="product-photos-img">
+            <img src="{% static 'images/pro5.jpg' %}" alt="">            
+        </div>
+    </div>
+
+    <div class="product-info">
+        <div class="product-info-title">
+            ALIA TWEED LOING CARDIGAN
+        </div>
+        <div class="product-info-price">
+            $863
+        </div>
+        <div class="product-info-text">
+            <p>
+                Top off your daytime edits with the sophisticated Alia Tweed Long Cardigan.
+            </p>
+            <p>
+                Designed to land just above the ankle this piece is made from cotton-blend fabric that gives this soft
+                tweed finish. It features unique details: 4 open pockets at the front and a soft blue leather line from
+                the neck along the body and pockets. Style over a simple outfit to elevate the elegance of this
+                cardigan.
+            </p>
+        </div>
+        <div class="product-info-share">
+            SHARE
+        </div>
+
+        <div class="product-info-options">
+            <div class="product-info-options-title">
+                Size:
+            </div>
+            <div class="product-info-options-choices">
+                <div class="product-info-options-choice square selected">XS</div>
+                <div class="product-info-options-choice square">S</div>
+                <div class="product-info-options-choice square">M</div>
+                <div class="product-info-options-choice square">L</div>
+                <div class="product-info-options-choice square">XL</div>
+            </div>
+        </div>
+
+        <div class="product-info-options">
+            <div class="product-info-options-title">
+                Color:
+            </div>
+            <div class="product-info-options-choices">
+                <div class="product-info-options-choice selected">Stone Blue</div>
+                <div class="product-info-options-choice">Black</div>
+
+            </div>
+        </div>
+
+        <div class="product-info-options">
+            <div class="product-info-options-title">
+                Fit:
+            </div>
+            <div class="product-info-options-choices">
+                <div class="product-info-options-choice selected">Standard</div>
+                <div class="product-info-options-choice">Petite</div>
+     
+            </div>
+        </div>
+
+
+        <div class="product-info-add">
+            ADD TO CART&nbsp;&nbsp;.&nbsp;&nbsp;$863
+        </div>
+        <div class="product-info-buy">
+            BUY IT NOW
+        </div>
+        <div class="product-info-wish">
+            Add to wishlist
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
 
 {% block scripts %}
-    <script src="{% static 'scripts/cart.js' %}"></script>
-    <script src="{% static 'scripts/mobilemenu.js' %}"></script>
+<script src="{% static 'scripts/cart.js' %}"></script>
+<script src="{% static 'scripts/mobilemenu.js' %}"></script>
 {% endblock scripts %}

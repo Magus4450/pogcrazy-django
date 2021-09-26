@@ -1,0 +1,115 @@
+.product{
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-sidebar{
+        width: 70px;
+    }
+    &-photos{
+
+        width: 50%;
+        &-img{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    &-info{
+        // position: absolute;
+        // right: 0;
+        // top: 0;
+        // height: 100%;
+        width: 40%;
+        padding: .5rem 3rem;
+        margin-right: 2rem;
+        &-title{
+            font-size: 1.3rem;
+            font-weight: $medium;
+            color: rgb(22, 22, 22);
+            margin-bottom: 1rem;
+            letter-spacing: .2rem;
+        }
+        &-price{
+            color: gray;
+            font-size: 1.2rem;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgb(230, 230, 230);
+        }
+        &-text{
+            color: rgb(41, 41, 41);
+            p{
+                margin-bottom: 1.5rem;
+                line-height: 1.4rem;
+                font-size: 1.01rem;
+                letter-spacing: .02rem;
+            }
+        }
+        &-share{
+            display: flex;
+            flex-direction: column;
+            color: gray;
+            font-size: .9rem;
+            margin-bottom: 2rem;
+        }
+        &-options{
+            display: flex;
+            flex-direction: column;
+            &-title{
+                color: black;
+                margin-bottom: 1rem;
+            }
+            &-choices{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 1rem;
+
+            }
+            &-choice{
+                color: gray;
+                padding: .7rem 2rem;
+                border: 1px solid gray;
+                cursor: pointer;
+                margin-right: 1rem;
+            }
+        }
+        &-add{
+            width: 100%;
+            color: gray;
+            border: 1px solid gray;
+            text-align: center;
+            padding: .8rem 0;
+            letter-spacing: .2rem;
+            margin-top: 1.5rem;
+            
+        }
+        &-buy{
+            width: 100%;
+            background-color: white;
+            border: 1px solid black;
+            text-align: center;
+            padding: .8rem 0;
+            letter-spacing: .2rem;
+            margin-top: 1.5rem;
+
+        }
+        &-wish{
+            text-align: center;
+            padding: .8rem 0;
+            margin-top: 1.5rem;
+
+        }
+    }
+}
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0rem;
+}
+.selected{
+    border: 1px solid black;
+}
