@@ -8,11 +8,32 @@
     }
     &-photos{
 
-        width: 50%;
+        width: 40%;
+        // display: flex;
+        // flex-direction: row;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        // flex: 0 0 25%;
+        height: 80vh;
+
+        .bag{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            height: 70vh;
+            transform: translate(-100%);
+            // overflow-y: scroll;
+
+        }
         &-img{
+            width: 100%;
+
             img{
                 width: 100%;
             }
+            margin-bottom: 2rem;
+
         }
     }
     &-info{
@@ -48,10 +69,20 @@
         }
         &-share{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             color: gray;
             font-size: .9rem;
             margin-bottom: 2rem;
+            margin-right: 1rem;
+
+            i{
+                margin-left: 1rem;
+                transition: all .3s ease;
+                &:hover{
+                    cursor: pointer;
+                    color: black;
+                }
+            }
         }
         &-options{
             display: flex;
