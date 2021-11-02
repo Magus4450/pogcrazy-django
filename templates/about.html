@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+About
+{% endblock title %}
+
+
+{% block content %}
+<!-----------------------------------------About--------------------------------->
+<div class="about">
+    <div class="about-head">
+        ABOUT
+    </div>
+    <div class="about-img">
+        <img src="{% static 'images/about1.jpg'%}" alt="">
+        <img src="{% static 'images/about2.jpg'%}" alt="">
+    </div>
+    <div class="about-desc">
+        <p>
+            <strong>POGCRAZY</strong> is a contemporary ready-to-wear label that aims to offer a minimalist wardrobe focused on clean cuts and impeccable details to strong sophisticated women.
+        </p>
+        <p>
+            At the centre of Bouguessa is an ethos of minimalist sophistication and feminine elegance. Merging global trends and contemporary classics inspired by art, architecture and modern design, the signature silhouettes lie in highly modern cuts, bold lines, and geometric precision.
+        </p>
+        <p>
+            <strong>POGCRAZY</strong> was founded in Apple by Banana in 2021. From her studio in Dubai Design District, she designs 3 collections a year.
+        </p>
+        <p>
+            Faiza’s first encounter with garment making took place during her early years while spending time with her grandmother who was a seamstress herself, and who taught her the basics of knighting and sewing. Her passion led her to take numerous internships in tailor shops while studying English literature in university. Through these internships she learned the basics of pattern making and developed an understanding for fabric characteristics.
+        </p>
+    </div>
+    <div class="about-img">
+        <img src="{% static 'images/about3.jpg'%}" alt="">
+        <img src="{% static 'images/about4.jpg'%}" alt="">
+    </div>
+</div>
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'scripts/cart.js' %}"></script>
+<script src="{% static 'scripts/mobilemenu.js' %}"></script>
+{% endblock scripts %}

@@ -27,7 +27,7 @@
         <li class="nav-bar">
             <ul class="nav-item"><a href="#">SHOP</a></ul>
             <ul class="nav-item"><a href="#">COLLECTIONS</a></ul>
-            <ul class="nav-item"><a href="#">ABOUT</a></ul>
+            <ul class="nav-item"><a href="{% url 'about:about' %}">ABOUT</a></ul>
             <ul class="nav-item"><a href="{% url 'journal:journal' %}">JOURNAL</a></ul>
         </li>
         <div class="brand">
@@ -60,7 +60,7 @@
         <div id="mobile-opt">
             <div class="mobile-opt"><a href="#">SHOP</a> +</div>
             <div class="mobile-opt"><a href="#">COLLECTIONS</a> +</div>
-            <div class="mobile-opt"><a href="#">ABOUT</a></div>
+            <div class="mobile-opt"><a href="{% url 'about:about' %}">ABOUT</a></div>
             <div class="mobile-opt"><a href="{% url 'journal:journal' %}">JOURNAL</a></div>
         </div>
         <div id="mobile-opt-extra">
